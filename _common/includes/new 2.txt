@@ -1,0 +1,24 @@
+<?php
+
+$textbox_group = "
+<div style=group-container id=textbox_group_container>
+	<div class=blk-inln>
+		Are items in this list sorted?<label>
+		<input type=checkbox id=sorted />&nbsp;<label for='sorted'>Yes</label>
+	</div>
+	<div class=blk-inln id=sort_method_container>
+		Sort Method:&nbsp;&nbsp;&nbsp;
+		<input type=radio name=sort_method id=sorted_asc value='asc' />&nbsp;<label for='sorted_asc'>Ascending</label>
+		&nbsp;&nbsp;&nbsp;
+		<input type=radio name=sort_method id=sorted_desc value='desc' />&nbsp;<label for='sorted_desc'>Descending</label>
+	</div>
+	<div class=blk-inln id=sort_by_container>
+		<select id=sort_by>
+			<option value='' selected disabled>Select field to sort by</option>
+			<option value='node_name'>Node Name / Label</option>
+			<option value='position'>Ordinal Position</option>
+		</select>
+	</div>
+</div>";
+
+?>

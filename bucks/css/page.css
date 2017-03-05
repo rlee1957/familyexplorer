@@ -1,0 +1,162 @@
+body
+{
+font-family: trebuchet ms, arial;
+}
+
+.main_header
+{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 50px;
+background-image: url("/bucks/images/goldbar.png");
+background-size: 4000px;
+border-style: none;
+overflow: auto;
+display: block;
+padding: 25px;
+}
+
+.page_header
+{
+position: absolute;
+top: 100px;
+left: 0;
+right: 0;
+height: 0;
+background-color: #CCFF99;
+border-style: solid;
+border-width: 10px;
+border-color: #8FB26B;
+padding: 15px;
+overflow: auto;
+display: block;
+}
+
+.overhead_options
+{
+position: absolute;
+top: 150px;
+left: 0;
+right: 0;
+height: 40px;
+background-color: #FFFFCC;
+border-style: solid;
+border-width: 10px;
+border-color: #CCCCA3;
+padding: 15px;
+overflow: auto;
+display: block;
+}
+
+.side_options
+{
+position: absolute;
+top: 238px;
+width: 400px;
+left: 0;
+bottom: 120px;
+background-color: #F8D8F0;
+border-style: solid;
+border-width: 10px;
+border-color: #B29BAD;
+padding: 15px;
+overflow: auto;
+display: block;
+}
+
+.content
+{
+position: absolute;
+top: 238px;
+left: 450px;
+right: 0;
+bottom: 120px;
+background-color: #ffffff;
+border-style: solid;
+border-width: 1px;
+border-color: #000000;
+padding: 0;
+overflow: auto;
+display: block;
+}
+
+.page_footer
+{
+position: absolute;
+height: 35px;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: auto;
+display: block;
+}
+
+.main_footer
+{
+position: absolute;
+height: 20px;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #DADAE6;
+border-style: solid;
+border-width: 10px;
+border-color: #C4C4CF;
+padding: 15px;
+overflow: auto;
+display: block;
+}
+
+iframe
+{
+display: none;
+}
+
+.blanket_1
+{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background:rgba(255,255,255,0.5);
+display: none;
+}
+
+.pane
+{
+position: absolute;
+top: 0px;
+left: 10px;
+right: 10px;
+bottom: 70px;
+}
+
+.pane_buttons
+{
+position: absolute;
+height: 30px;
+left: 10px;
+right: 10px;
+bottom: 40px;
+text-align: center;
+display: none;
+}
+
+.inner_content
+{
+position: relative; 
+top: 0px; 
+height: 85%; 
+overflow: auto; 
+border-style: none;
+/*border-width: 1px;
+border-color: #c0c0c0;*/
+}
+
+.action
+{
+width: 85px;
+}

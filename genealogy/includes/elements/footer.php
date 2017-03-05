@@ -1,0 +1,1 @@
+<center>This is the Footer</center>

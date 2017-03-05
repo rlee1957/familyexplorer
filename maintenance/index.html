@@ -1,0 +1,31 @@
+<?php
+
+include("../_common/includes/show_errors.php");
+include("includes/sql_functions.php");
+$campaigns = true;
+$current_campaign = array();
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Data Maintenance</title>
+<link rel="stylesheet" type="text/css" href="css/template.css">
+<link rel="stylesheet" type="text/css" href="css/popup.css">
+<script type="text/javascript" src="js/head.js"></script>
+<body>
+<?php 
+include("includes/popup.php");
+?>
+<header><?php include("includes/header.php"); ?></header>
+<notes><?php include("includes/notes.php"); ?></notes>
+<section id="section"><?php include("includes/section.php"); ?></section>
+<?php 
+include("includes/search_results.php");
+include("includes/work.php"); 
+?>
+<a href="#openModal" id="popgo" style="display: none;">Open Modal</a>
+</body>
+</html>

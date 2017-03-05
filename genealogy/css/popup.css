@@ -1,0 +1,82 @@
+.popup-container
+{
+position: fixed;
+top: 50%;
+left: 50%;
+padding: 25px;
+border-radius: 20px;
+-ms-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+width: 400px;
+background-color: #EDEDED;
+font-family: Calibri, Arial;
+display: none;
+}
+
+.popup-table
+{
+color: #000000; 
+font-size; 16pt;
+}
+
+.popup-mask
+{
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.5);
+display: none;
+}
+
+.popup-spacer1
+{
+height: 40px;	
+}
+
+.popup-head
+{
+text-align: center; 
+color: #312E92; 
+font-size; 20pt;
+}
+
+.popup-msg
+{
+text-align: left;
+}
+
+.popup-list
+{
+position: fixed;
+top: 50%;
+left: 50%;
+padding: 25px;
+border-radius: 20px;
+-ms-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+width: 80%;
+height: 400px;
+background-color: #EDEDED;
+font-family: Calibri, Arial;
+display: none;
+}
+
+.quick_search
+{
+position: fixed;
+top: 50%;
+left: 50%;
+padding: 25px;
+border-radius: 20px;
+-ms-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+width: 80%;
+background-color: #EDEDED;
+font-family: Calibri, Arial;
+display: none;
+}

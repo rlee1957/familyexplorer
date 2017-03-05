@@ -1,0 +1,53 @@
+/* CSS Document */
+
+.menu_item
+{
+border-style: solid;
+border-width: 1;
+border-color: #DFEBE0;
+background-color: #DFEBE0;
+color: #078A16;
+padding: 5px;
+cursor: pointer;
+display: inline-block;
+}
+
+.menu_item_selected
+{
+border-style: solid;
+border-width: 1;
+border-color: black;
+background-color: yellow;
+color: blue;
+padding: 5px;
+cursor: pointer;
+display: inline-block;
+}
+
+.menu
+{
+width: 100%;
+border-style: none;
+background-color: #DFEBE0;
+padding: 10px;
+}
+
+.content
+{
+background-color: #FEFFDB;
+color: blue;
+font-weight: bold;
+text-align: center;
+display: none;
+padding: 10px;
+border-style: inset;
+}
+
+.instruction
+{
+border-style: solid;
+border-width: 1px;
+border-color: #DBDBDB;
+background-color: #FBFF94;
+padding: 10px;
+}

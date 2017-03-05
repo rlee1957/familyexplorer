@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+<div id='imgStore' name='imgStore' style='position: absolute; left: 20; top: 20; height: 300; width: 300;overflow: auto'>
+<img id="img0" name="img0" 
+     onload="window.setTimeout('setAdjust()', 100)"	
+     src='http://www.boiseservices.com/icons/bluedot.gif'>	
+</div>
+<div style='position: absolute; left:10; top: 10; background-color:#72878d; width: 1220; height: 858; overflow: auto'>
+<table width=1000 border=1>
+   <tr>
+      <td colspan=2>
+	     <input type='text' id='filePath' name='filePath' style='width: 100%'>
+	  </td>
+   </tr>
+   <tr>
+      <td width=200 valign='top'>
+	     <input type='checkbox' id='chkAdjust' name='chkAdjust'> Auto Adjust
+		 <div id='divList' name='divList'>
+		 <select id='lstFiles' name='lstFiles' size='45' 
+		 		 style='width: 200' onchange="img0.src = this.options(this.selectedIndex).innerText; filePath.value = this.options(this.selectedIndex).innerText">
+ </select>
+		 </div>
+	  </td>
+	  <td width=850 height=800 valign='top' bgcolor='#ffffff'>
+	     <div style='width:1000; height: 800; overflow: auto'>
+	        <img id='img00' name='img00' src='http://www.boiseservices.com/icons/bluedot.gif'>
+		 </div>
+	  </td>
+   </tr>
+</table>   	  	  
+</div> 
+</body>
+</html>
+<script language='JavaScript'>
+
+function callSet()
+{
+window.setTimeOut('setAdjust()',1000);
+}
+
+function setAdjust()
+{
+img00.src = img0.src;
+img00.width = img0.width;
+img00.height = img0.height;
+if(chkAdjust.checked)
+   {
+   adjustImage(img00,img0.height, img0.width, 795, 1000);
+   }
+}
+
+
+function listItemChange(sr)
+{
+img00.width = img0.width;
+img00.height = img0.height;
+img00.src = img0.src;
+filePath.value = this.value
+}
+
+function setAdjust()
+{
+img00.src = img0.src;
+img00.width = img0.width;
+img00.height = img0.height;
+if(chkAdjust.checked)
+   {
+   adjustImage(img00,img0.height, img0.width, 795, 1000);
+   }
+}
+
+function imgClick()
+{
+w = new Number(img00.width);
+h = new Number(img00.height);
+if(event.button == 1)
+   {
+   img0.style.display = "none";
+   img00.style.display = "block";
+   img00.width = Math.round(w * 1.1);
+   img00.height = Math.round(h * 1.1);
+   }
+if(event.button == 2)
+   {
+   img0.style.display = "none";
+   img00.style.display = "block";
+   img00.width = Math.round(w * .9);
+   img00.height = Math.round(h * .9);
+   }   
+}
+
+function adjustImage(img, aH, aW, vH, vW)
+{
+//alert("Image [Width X Height] (" + aW + " X " + aH + ")");
+var vHe = new Number(aH);
+var vWi = new Number(aW);
+if((aH > vH) || (aW > vW))
+   {
+   if(aH > vH)
+      {
+	  img.height = vH;
+   	  img.width = vH * (aW/aH);
+	  }
+   aH = img.height;
+   aW = img.width;
+   if(aW > vW)
+      {
+   	  img.width = vW;
+   	  img.height = vW * (aH/aW);
+      }
+   }
+}
+</script>	

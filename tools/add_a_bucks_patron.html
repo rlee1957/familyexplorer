@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Patron</title>
+</head>
+<body>
+<form target="ifr" action="add_patron.php" method="post">
+<table>
+	<tr>
+		<td>Index</td>
+		<td><input type=text id="idx" name="idx" />
+		<td><input type=button onclick="getIDX();" value="Get Index" /></td>
+	</tr>
+	<tr>
+		<td>Personal Key</td>
+		<td><input type=text id="personal_key" name="personal_key" />
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Sponsor Key</td>
+		<td><input type=text id="sponsor_key" name="sponsor_key" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>User Name</td>
+		<td><input type=text id="username" name="username" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Password</td>
+		<td><input type=text id="password" name="password" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Email Address</td>
+		<td><input type=text id="email" name="email" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>First Name</td>
+		<td><input type=text id="first_name" name="first_name" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Middle Name</td>
+		<td><input type=text id="middle_name" name="middle_name" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Last Name</td>
+		<td><input type=text id="last_name" name="last_name" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Address 1</td>
+		<td><input type=text id="address1" name="address1" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Address 2</td>
+		<td><input type=text id="address2" name="address2" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>City</td>
+		<td><input type=text id="city" name="city" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>State</td>
+		<td><input type=text id="state" name="state" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Zip Code</td>
+		<td><input type=text id="zip" name="zip" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>User's Role</td>
+		<td><input type=text id="role" name="role" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>User's Rank</td>
+		<td><input type=text id="rank" name="rank" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Date Created</td>
+		<td><input type=text id="date_created" name="date_created" />
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>Date Last Changed</td>
+		<td><input type=text id="date_last_changed" name="date_last_changed" />
+		<td>&nbsp;</td>
+	</tr>
+</table>	
+<input type=submit />
+</form>
+<iframe style="width: 100%;  height: 500px;" id="ifr" name="ifr"></iframe>
+</body>
+</html>

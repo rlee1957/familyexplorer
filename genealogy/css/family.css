@@ -1,0 +1,263 @@
+.family-container
+{
+position: relative;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+}
+
+.label
+{
+position: absolute;
+border-style: solid; 
+border-width: 1px; 
+border-color: #c0c0c0;
+text-align: center;
+font-size: 12pt;
+font-weight: bold;
+padding: 5px 0 0 0;
+overflow: hidden;
+cursor: pointer;
+}
+
+.label:hover
+{
+border-color: #FF0000;
+color: #FF0000;
+}
+
+.ind-lbl
+{ 
+top: 5px; 
+left: 5px; 
+width: 250px; 
+height: 25px;
+}
+
+.sps-lbl
+{ 
+top: 5px; 
+left: 260px; 
+width: 250px; 
+height: 25px; 
+}
+
+
+.pnt-lbl
+{ 
+top: 5px; 
+left: 515px; 
+right: 5px; 
+height: 25px; 	
+}
+
+.window
+{
+position: absolute;
+border-style: solid;
+border-width: 1px;
+border-color: #606060; 
+overflow: auto;
+}
+
+.ind-cnt
+{
+top: 40px; 
+left: 5px; 
+width: 250px; 
+height: 250px; 	
+}
+
+.sps-cnt
+{
+top: 40px; 
+left: 260px; 
+width: 250px; 
+height: 250px; 	
+}
+
+.pnt-cnt
+{
+top: 40px; 
+left: 515px; 
+right: 5px; 
+height: 250px;	
+}
+
+.cld-lbl
+{
+top: 295px; 
+left: 5px; 
+width: 250px; 
+height: 25px;
+}
+
+.dtl-lbl
+{
+top: 295px; 
+left: 260px; 
+right: 5px; 
+height: 25px; 	
+}
+
+.cld-cnt
+{
+top: 330px; 
+left: 5px; 
+width: 250px; 
+bottom: 5px;	
+}
+
+.dtl-cnt
+{
+top: 330px; 
+left: 260px; 
+right: 5px; 
+bottom: 5px;	
+}
+
+.thumbnail-table
+{
+table-layout: fixed;
+width: 240px;
+height: 240px;
+border-style: solid;
+border-color: #FFFFFF;
+border-width: 5px;
+cursor: pointer;
+}
+
+.thumbnail-table:hover
+{
+border-color: #FF0000;	
+}
+
+.thumbnail-image
+{
+height: 100%; 
+width: 100%; 
+object-fit: contain;	
+}
+
+.thumbnail-label
+{
+color: #000000;
+}
+
+.thumbnail-type
+{
+color: #0000FF;
+}
+
+.thumbnail-event
+{
+color: #336600;
+}
+
+.thumbnail
+{
+border-style: solid;
+border-color: #FFFFFF;
+border-width: 3px;	
+cursor: pointer;
+}
+
+.thumbnail:hover
+{
+border-color: #FF0000;	
+}
+
+.event-fact
+{
+border-style: solid;
+border-width: 1px;
+border-color: #c0c0c0;
+background-color: transparent;	
+color: #000000;
+}
+
+.event-fact:hover
+{
+border-color: #000000;
+background-color: #c0c0c0;
+color: #0000ff;	
+}
+
+.pu-actions
+{
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 17%; 
+max-width: 17%;
+overflow: hidden; 
+text-align: center;	
+}
+
+.pu-edit
+{
+position: absolute; 
+top: 0; 
+left: 17%; 
+width: 17%; 
+overflow: hidden; 
+text-align: center; 
+vertical-align: bottom;
+}
+
+.pu-list
+{
+position: absolute; 
+top: 0; 
+left: 34%; 
+width: 65%; 
+overflow: auto; 
+text-align: center; 
+vertical-align: bottom;	
+}
+.pu-list-no-edit
+{
+position: absolute; 
+top: 0; 
+left: 18%; 
+width: 80%; 
+max-width: 80%;
+overflow: auto; 
+text-align: center; 
+vertical-align: bottom;	
+}
+
+.pu-list-item
+{
+	
+}
+
+.pu-edit-container
+{
+position: relative; 
+overflow: hidden; 
+top: 5px; 
+left: 5px; 
+right: 5px; 
+height: 100%;
+}
+
+.pu-title
+{
+text-align: center;
+font-weight: bold;
+font-size: 20pt;
+padding: 25 5 5 5;
+}
+
+.pu-action-button
+{
+width: 95%;
+font-size: 11pt;
+padding: 10px;
+font-weight: bold;
+color: #000099;	
+}
+
+

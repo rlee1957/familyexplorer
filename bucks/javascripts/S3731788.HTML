@@ -1,0 +1,487 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html">
+<meta name="generator" content="PSPad editor, www.pspad.com">
+<title>javascript preview: S3731788.HTML</title>
+</head>
+<body>
+<script type="text/javascript">
+<!-- begin script
+/* new member javascript */
+alert("Start");
+function checkLogon()
+{
+//alert("checkLogon()");
+var user_name = document.getElementById("logon_user_name").value;
+var password = document.getElementById("logon_password").value;
+if(user_name.length > 0)
+  {
+  if(password.length > 0)
+    {
+    var url = "includes/check_logon.php?user_name=" + user_name;
+    url += "&password=" + password;
+    //alert(url);
+    ajax = initializeAJAX();
+    newContent = "";
+    runNext = "respondLogon();";
+    ajax.onreadystatechange = stateChange;
+    ajax.open("GET", url, true);
+    ajax.send(null);
+    }
+  else
+    {
+    alert("Please enter your password.");
+    document.getElementById("logon_password").focus();
+    }
+  }
+else
+  {
+  alert("Please enter your user name.");
+  document.getElementById("logon_user_name").focus();
+  }
+}
+
+function userNameChange(userName)
+{
+//alert("userNameChange")
+if(userName != "")
+  {
+  var url = "includes/check_user_name.php?user_name=" + userName;
+  document.getElementById("t").value = url;
+  ajax = initializeAJAX();
+  newContent = "";
+  runNext = "respondUserName();";
+  ajax.onreadystatechange = stateChange;
+  ajax.open("GET", url, true);
+  ajax.send(null);
+  }
+else
+  {
+  var msg = "Please enter an user name.";
+  alert(msg);
+  user_name_verify.style.color = "red";
+  user_name.focus();
+  }
+}
+
+function checkSponsor()
+{
+var url = "includes/check_sponsor.php?sponsor=" + sponsor1.value;
+alert(url);
+document.getElementById("t").value = url;
+ajax = initializeAJAX();
+alert("ajax");
+newContent = "";
+runNext = "respondSponsor();";
+ajax.onreadystatechange = stateChange;
+ajax.open("GET", url, false);
+ajax.send(null);
+alert("sent");
+}
+
+function respondLogon()
+{
+var user_name = document.getElementById("logon_user_name");
+var password = document.getElementById("logon_password");
+var msg = "Failed\n\nPlease try again!";
+if(newContent.indexOf("Fail") > -1)
+  {
+  alert(msg);
+  user_name.value = "";
+  user_name.focus();
+  password.value = "";
+  }
+else
+  {
+  var url = "dashboard.php?uid=" + newContent;
+  //alert(url);
+  window.open(url,"_self","");
+  }
+}
+
+function respondUserName()
+{
+var msg = "User name\n\n" + user_name.value + "\n\nIs acceptable!";
+if(newContent.indexOf("Already exists!") > -1)
+  {
+  msg = "User name\n\n" + user_name.value + "\n\nAlready exists!\n\nPlease try again.";
+  alert(msg);
+  user_name.value = "";
+  user_name_verify.style.color = "red";
+  user_name.focus();
+  document.getElementById("sp_user_name").innerText = "";
+  }
+else
+  {
+  user_name_verify.style.color = "black";
+  msg = "<font color='blue' style='font-weight: bold;'>";
+  msg += "User Name Accepted ------ " + user_name.value + "</font>";
+  document.getElementById("sp_user_name").innerHTML = msg;
+  }
+newContent = null;
+ajax = null;
+runNext = null;
+}
+
+function respondSponsor()
+{
+alert("respondsponsor");
+var sponsor = sponsor1.value;
+var msg = "Sponsor ID\n\n" + sponsor + "\n\n";
+msg += "Is not a valid Sponsor ID!\n\n";
+msg += "Please re-enter and try again.";
+if(newContent.indexOf("Does not exist!") > -1)
+  {
+  alert(msg);
+  sponsor1.value = "";
+  sponsor1_verify.style.color = "red";
+  sponsor1.focus();
+  changeMade("Yes");
+  document.getElementById("sp_sponsor").innerHTML = "";
+  }
+else
+  {
+  msg = "<font color='blue' style='font-weight: bold;'>";
+  msg += "Sponsor ID Found -------- " + sponsor1.value + "</font>";
+  sponsor1_verify.style.color = "black";
+  changeMade("No");
+  document.getElementById("sp_sponsor").innerHTML = msg;
+  document.getElementById("sponsor_address").innerHTML = newContent;
+  }
+newContent = null;
+ajax = null;
+runNext = null;
+}
+
+function respondSave()
+{
+document.getElementById("uid").value = uid.innerText;
+document.getElementById("form_next").submit();
+}
+
+function showAddress()
+{
+changeMade("Yes");
+var address = "";
+var del = "";
+try{
+var name = first_name.value + " ";
+name += middle_name.value + " ";
+name += last_name.value;
+var ad_num = address1_number.value;
+if(ad_num.length > 0){ad_num += " ";}
+var ad_st = address1_street_name.value;
+if(ad_st.length > 0){ad_st += " ";}
+var ad_dr = address1_street_direction.value;
+if(ad_dr.length > 0){ad_dr += " ";}
+var ad_ty = address1_street_type.value;
+if(ad_ty.length > 0){ad_ty += " ";}
+var ad_sp = address1_space_type.value;
+if(ad_sp.length > 0){ad_sp += " ";}
+var ad_sn = address1_space_number.value;
+var scity = city.value;
+if(scity.length > 0){scity += ", ";}
+var sstate = state.value;
+if(sstate.length > 0){sstate += " ";}
+
+var address1 = ad_num + ad_dr + ad_st + ad_ty + ad_sp + ad_sn;
+var saddress2 = address2.value;
+var city_state_zip = scity + sstate + zip.value;
+if(name.length > 0){address = name + "<br />";}
+if(address1.length > 0){address += address1 + "<br />";}
+if(saddress2.length > 0){address += saddress2 + "<br />";}
+if(city_state_zip.length > 0){address += city_state_zip;}
+if(address == ""){address = "&nbsp;";}
+document.getElementById("t").value = address;
+document.getElementById("address").innerHTML = address;
+}catch(exc){alert(exc.message);}
+}
+
+function stepClick(idx)
+{
+//alert(idx);
+var control;
+var o = null;
+for(x=1;x<8;x++)
+  {
+  control = "step" + x;
+  o = document.getElementById(control);
+  o.style.display = "none";
+  }
+control = "step" + idx;
+o = document.getElementById(control);
+o.style.display = "block";
+}
+
+function addNewMember()
+{
+alert("Add new member");
+if(verify())
+  {
+  checkSponsor();
+  }
+}
+
+function verify()
+{
+try{
+var retVal = true;  
+var msg = "";
+if(!I_Agree.checked)
+  {
+  stepClick(1); 
+  msg = "You must agree to the Terms of Agreement\n\nto become a member.";
+  alert(msg);
+  return false;
+  } 
+if((first_name.value == "")&&(middle_name.value == "")&&(last_name.value == ""))
+  {
+  stepClick(2); 
+  msg = "Please enter Your name.";
+  alert(msg);
+  name_verify.style.color = "red";
+  first_name.focus();
+  return false;
+  }  
+//alert(user_name.value);   
+if(user_name.value == "")
+  {
+  stepClick(2); 
+  msg = "Please enter a user name.\n\nMake one up.";
+  alert(msg);
+  user_name_verify.style.color = "red";
+  user_name.focus();
+  return false;
+  }     
+if(password.value == "")
+  {
+  stepClick(2); 
+  msg = "Please enter a password.\n\nMake one up.";   
+  alert(msg);
+  password_verify.style.color = "red";
+  password.focus();
+  return false;
+  }      
+if(password2.value == "") 
+  {
+  stepClick(2); 
+  msg = "Please verify your new password.";   
+  alert(msg);
+  password2_verify.style.color = "red";
+  password2.focus();
+  return false;
+  }      
+if(password.value != password2.value)      
+  {
+  stepClick(2); 
+  msg = "Password and Verify should match.\n\n";
+  msg += "They do not match.\n\nPlease re-enter Password and Verify.";   
+  alert(msg);
+  password_verify.style.color = "red";
+  password2_verify.style.color = "red";
+  password.value = "";
+  password2.value = "";
+  password.focus();
+  return false;
+  }     
+if(email.value == "")
+  {
+  stepClick(2); 
+  msg = "Please enter Your email address.";   
+  alert(msg);
+  email_verify.style.color = "red";
+  email.focus();
+  return false;
+  }     
+var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+if(email.value.search(emailRegEx) == -1) 
+  {
+  stepClick(2); 
+  msg = "Not a valid email address.\n\nPlease re-enter Your email address.";   
+  alert(msg);
+  email_verify.style.color = "red";
+  email.focus();
+  email.value = "";
+  return false;
+  }    
+if((address1_number.value == "")&&(address1_street_name.value == "")&&
+   (address1_street_direction.value == "")&&(address1_street_type.value == "")&&
+   (address1_space_type.value == "")&&(address1_space_number.value == "")&&
+   (address2.value == ""))
+  {
+  stepClick(3); 
+  msg = "Please Your mail address.";   
+  alert(msg);
+  address2_verify.style.color = "red";
+  address1_number.focus();
+  return false;
+  }     
+if(city.value == "")
+  {
+  stepClick(3); 
+  msg = "Please enter Your city.";   
+  alert(msg);
+  city_verify.style.color = "red";
+  city.focus();
+  return false;
+  }       
+if(state.value == "")
+  {
+  stepClick(3); 
+  msg = "Please select Your state.";   
+  alert(msg);
+  state_verify.style.color = "red";
+  state.focus();
+  return false;
+  }     
+if(sponsor1.value == "")    
+  {      
+  stepClick(4);        
+  msg = "Please enter the Sponsor ID from\n\n";
+  msg += "the Sponsor who invited you to join.\n\n";
+  msg += "Check the invitation you received in the mail or\n\n";
+  msg += "click the No Invitation button.";   
+  alert(msg);     
+  sponsor1_verify.style.color = "red";
+  sponsor1.focus();
+  return false;  
+  } 
+}catch(exc){alert(exc.message);}
+//checkSponsor(); 
+alert("verify html passed"); 
+return true;                  
+}
+
+function save()
+{
+var dte = new Date();
+var yr = dte.getFullYear();
+var mo = "0" + (dte.getMonth() + 1);
+mo = mo.substr(mo.length - 2, 2);
+var da = "0" + dte.getDate();
+var da = da.substr(da.length - 2, 2);
+var dat = yr + "/" + mo + "/" + da;
+var url = "includes/add_member.php?id=" + uid.innerText;
+url += "&sponsor1=" + sponsor1.value;
+url += "&first_name=" + first_name.value;
+url += "&middle_name=" + middle_name.value;
+url += "&last_name=" + last_name.value;
+url += "&user_name=" + user_name.value;
+url += "&password=" + password.value;
+url += "&address1_number=" + address1_number.value;
+url += "&address1_street_name=" + address1_street_name.value;
+url += "&address1_street_direction=" + address1_street_direction.value;
+url += "&address1_street_type=" + address1_street_type.value;
+url += "&address1_space_type=" + address1_space_type.value;
+url += "&address1_space_number=" + address1_space_number.value;
+url += "&address2=" + address2.value;
+url += "&city=" + city.value;
+url += "&state=" + state.value;
+url += "&zip=" + zip.value;
+url += "&created=" + dat;
+url += "&level_date=" + dat;
+
+ajax = initializeAJAX();
+newContent = "";
+runNext = "respondSave();";
+ajax.onreadystatechange = stateChange;
+ajax.open("GET", url, false);
+ajax.send(null);
+}
+
+function changeMade(answer)
+{
+var check_display = "none";
+var save_display = "block";
+var check_disabled = true;
+var save_disabled = false;
+if(answer == "Yes")
+  {
+  check_display = "block";
+  save_display = "none";
+  check_disabled = false;
+  save_disabled = true;
+  }
+button_check.style.display = check_display;
+button_check.disabled = check_disabled;
+button_save.style.display = save_display;
+button_save.disabled = save_disabled;
+}
+
+function recalculate()
+{   
+var o = document.getElementById("hyp");
+var n = o.value;
+if((n == "")||(isNaN(n)))
+  {
+  alert("Value must be numeric!");
+  o.value = "";
+  o.focus();
+  return;
+  }     
+var ar = new Array();
+var amounts = new Array();
+ar[ar.length] = 0;
+ar[ar.length] = 1;
+ar[ar.length] = 1;
+ar[ar.length] = 1;
+ar[ar.length] = 10;
+amounts[amounts.length] = ar;  
+var ar = new Array();
+ar[ar.length] = 0;
+ar[ar.length] = 10;
+ar[ar.length] = 10;
+ar[ar.length] = 10;
+ar[ar.length] = 100;
+amounts[amounts.length] = ar;
+var ar = new Array();
+ar[ar.length] = 0;
+ar[ar.length] = 10;
+ar[ar.length] = 10;
+ar[ar.length] = 100;
+ar[ar.length] = 100;
+amounts[amounts.length] = ar;
+var ar = new Array();
+ar[ar.length] = 0;
+ar[ar.length] = 10;
+ar[ar.length] = 100;
+ar[ar.length] = 100;
+ar[ar.length] = 100;
+amounts[amounts.length] = ar;
+var ar = new Array();
+ar[ar.length] = 0;
+ar[ar.length] = 100;
+ar[ar.length] = 100;
+ar[ar.length] = 100;
+ar[ar.length] = 100;
+amounts[amounts.length] = ar;
+var totals = new Array();
+totals[0] = 0;
+totals[1] = 0;
+totals[2] = 0;
+totals[3] = 0;
+totals[4] = 0;
+
+for(x=1;x<5;x++)
+  {
+  v = "l" + n + "_count";
+  document.getElementById(v).innerHTML = n;
+  for(y=0;y<5;y++)
+    {
+    v = "l" + x + "lv" + y;
+    amt = n * ar[x][y];
+    document.getElementById(v).innerHTML = amt;
+    totals[y] += amt; 
+    }
+  n = n * n;
+  }
+for(x=0;x<5;x++)
+  {
+  v = "total_lv" + x;
+  document.getElementById(v).innerHTML = totals[x];
+  }         
+}
+// end script -->
+</script>
+</body>
+</html>

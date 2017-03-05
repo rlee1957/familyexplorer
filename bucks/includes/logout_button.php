@@ -1,0 +1,1 @@
+<a href="destroy_session.php" target="_self"><input type="button" value="Log Off" class="btn btn-custom action" /></a>

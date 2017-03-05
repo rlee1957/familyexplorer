@@ -1,0 +1,117 @@
+body
+{
+font-family: "trebuchet MS", arial;
+}
+
+.header
+{
+position: absolute;
+top: 5px;
+left: 5px;
+right: 5px;
+height: 200px;
+background-color: #c0ffff;
+padding: 10px;
+}
+
+.db
+{
+height: 180px;
+}
+
+.db_control
+{
+float: left;
+}
+
+.db_label
+{
+font-weight: bold;
+text-align: center;
+background-color: #E0E0EB;
+color: #000000;
+font-size: 6pt;
+border-width: 1px 0 0 1px;
+border-color: #000000;
+border-style: solid none none solid;
+}
+
+.db_value
+{
+font-weight: bold;
+text-align: center;
+font-family: Aharoni, arial;
+background-color: #000000;
+color: #00FF00;
+font-size: 6pt;
+border-width: 0 0 1px 1px;
+border-color: #c0c0c0;
+border-style: none none solid solid;
+}
+
+.options
+{
+width: 142px;
+text-align: center;
+}
+
+.option
+{
+width: 140px;
+display: block;
+padding: 5;
+text-align: center;
+border-color: #ffffff #665366 #665366 #ffffff;
+border-width: 4px 3px 3px 4px;
+border-style: solid;
+font-size: 8pt;
+font-weight: bold;
+color: #909090;
+cursor: pointer;
+overflow: hidden;
+text-decoration: none;
+background-color: #ffcfff;
+}
+
+.option:hover
+{
+color: #665366;
+
+}
+
+.option:active
+{
+color: #0000ff;
+background-color: #FFFF00;
+border-color: #666600 #FFFFB2 #FFFFB2 #666600;
+border-width: 3px 4px 4px 3px;
+border-style: solid;
+}
+
+.option:focus
+{
+color: #000000;
+background-color: #ffffc0;
+border-color: #ffffc0 #ffffc0 #ffffc0 #ffffc0;
+border-width: 3px 4px 4px 3px;
+border-style: solid;
+}
+
+.content
+{
+position: absolute;
+top: 206px;
+left: 306px;
+right: 5px;
+bottom: 5px;
+background-color: #ffffc0;
+padding: 15px;
+}
+
+.content_header
+{
+font-size: 26pt;
+font-weight: bold;
+color: #00455E;
+text-align: center;
+}

@@ -1,0 +1,67 @@
+/* CSS Document */
+instruction
+{
+background-color: silver;
+}
+
+.instruction_table
+{
+table-layout: fixed;
+width: 100%;
+}
+
+.instruction_menu
+{
+border-style: inset;
+border-width: 2;
+background-color: #E6FDFF;
+vertical-align: top;
+}
+
+.instruction_content
+{
+border=style: inset;
+border-width: 3;
+background-color: #FDFFE6;
+vertical-align: top;
+font-family: arial;
+font-size: 16;
+}
+
+.instruction_title
+{
+border=style: inset;
+background-color: #FAFAFA;
+font-family: arial;
+font-weight: bold;
+font-size: 20;
+text-align: center;
+color: blue;
+height: 30px;
+}
+
+.instruction_spacer
+{
+width: 200px;
+height: 2px;
+}
+
+.instruction_link
+{
+text-align: center;
+font-family: arial;
+font-size: 16;
+border-style: solid;
+border-width: 1;
+border-color: #E6FDFF;
+color: #0D6910;
+cursor: pointer;
+}
+
+.def
+{
+font-size: 12;
+font-family: arial;
+text-align: left;
+vertical-align: top;
+}

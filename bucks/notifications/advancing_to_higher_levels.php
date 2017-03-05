@@ -1,0 +1,16 @@
+** Advancing to Higher Levels **
+Why advance to a higher level?
+	Please keep in mind that advancing to higher levels is completely voluntary.
+	In order to have level 1 contributions directed to you, you must be at level 1. In order to have level 2 contributions directed to you, you must be at level 2. In order to have level 3 contributions directed to you, you must be at level 3.  In order to have level 4 contributions directed to you, you must be at level 4.  In order to have level 5 contributions directed to you, you must be at level 5 ... and so on and so forth.
+New Members
+	New members have not advanced to level 1 until they donate as specified when they first sign up. New members who donate a total of $13.00 as specified when they first sign up are automatically advanced to level 1 and are eligible to receive level 1 contributions.
+Level 1 
+	To advance to level 1, click the Advance to Level 1 link. Only NEW members will see the "Advance to Level 1" link. Follow the instructions. You must be at level 1 in order to have level 1 contributions directed to you.
+Level 2
+	Once you have received $1300.00 in level 1 contributions, it is recommended that you advance to level 2, however advancement is completely voluntary and you may advance to level 2 whenever you wish. To advance to level 2, click the Advance to Level 2 link. Only members at Level 1 will see the "Advance to Level 2" link. Follow the instructions. You must be at level 2 in order to have level 2 contributions directed to you. At level 2, you will still recieve level 1 contributions as well.
+Level 3
+	Once you have received $2200.00 in level 2 contributions, it is recommended that you advance to level 3, however advancement is completely voluntary and you may advance to level 3 whenever you wish. To advance to level 3, click the Advance to Level 3 link. Only members at Level 2 will see the "Advance to Level 3" link. Follow the instructions. You must be at level 3 in order to have level 3 contributions directed to you. At level 3, you will still recieve level 2 and 1 contributions as well.
+Level 4
+	Once you have received $3100.00 from level 3 contributions, it is recommended that you advance to level 4, however advancement is completely voluntary and you may advance to level 4 whenever you wish. To advance to level 4, click the Advance to Level 4 link. Only members at Level 3 will see the "Advance to Level 4" link. Follow the instructions. You must be at level 4 in order to have level 4 contributions directed to you. At level 4, you will still recieve level 3, 2 and 1 contributions as well.
+Level 5
+	Once you have received $4000.00 from level 4 contributions, it is recommended that you advance to level 5, however advancement is completely voluntary and you may advance to level 5 whenever you wish. To advance to level 5, click the Advance to Level 5 link. Only members at Level 4 will see the "Advance to Level 5" link. Follow the instructions. You must be at level 5 in order to have level 5 contributions directed to you. At level 5, you will still recieve level 4, 3, 2 and 1 contributions as well.

@@ -1,0 +1,17 @@
+@media print 
+{
+.noprint 
+	{
+	visibility:hidden;
+	height: 0px;
+    } 
+.yesprint 
+	{
+	visibility:visible;
+    display: block;
+    }
+footer 
+	{
+	page-break-after: always;
+	}
+}
