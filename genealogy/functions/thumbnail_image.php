@@ -6,7 +6,7 @@ $htm = "
 <div onclick='thumbnail_select(".$id.");' class=thumbnail>
 	<center>
 	<div style='text-align: center; height: 250px; width: 250px;'>
-		<img src='addons/".$thumbnail["filename"]."' class=thumbnail-image style='max-height: 250px; max-width: 250px;' />
+		<img src='addons/".$thumbnail["filename"]."' class=thumbnail-image style='max-height: 175px; max-width: 175px;' />
 	</div>
 	</center>
 	<input type=hidden id=thumbnail_id_".$id." value='".$thumbnail["thumbnail_id"]."' />

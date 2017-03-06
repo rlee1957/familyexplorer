@@ -1,7 +1,7 @@
 <?php
 
 $sql = "
-update people set individual = ?, changerid = ?, lastchangeddate = ?  where id = ?
+update people set individual = ?, changerid = ?, lastchangedate = ?  where id = ?
 ";
 
 ?>

@@ -1,0 +1,7 @@
+[15-Jan-2017 03:58:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'webaccess'@'localhost' (using password: YES)' in /home/rlee1957/public_html/_common/database/sql_functions.php:97
+Stack trace:
+#0 /home/rlee1957/public_html/_common/database/sql_functions.php(97): PDO->__construct('mysql:host=loca...', 'webaccess', 'sseccabew')
+#1 /home/rlee1957/public_html/_common/database/sql_functions.php(62): get_pdo('../')
+#2 /home/rlee1957/public_html/genealogy/logon/login.php(13): sql_shell('\r\nselect * from...', Array, '../')
+#3 {main}
+  thrown in /home/rlee1957/public_html/_common/database/sql_functions.php on line 97

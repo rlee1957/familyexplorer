@@ -10,7 +10,30 @@ $params = array();
 $params[count($params)] = $id;
 $results = sql_shell($sql, $params, $path);
 $thumbnails = $results["recordset"];
-
+$c = count($thumbnails);
+$thumbnails[$c] = array();
+$thumbnails[$c]["thumbnail_id"] = -1;
+$thumbnails[$c]["id"] = -1;
+$thumbnails[$c]["filename"] = "thumbnails/male.gif";
+$thumbnails[$c]["title"] = "Male";
+$thumbnails[$c]["viewvalue"] = "1";
+$thumbnails[$c]["ordinalposition"] = 99;
+$c = count($thumbnails);
+$thumbnails[$c] = array();
+$thumbnails[$c]["thumbnail_id"] = -2; 
+$thumbnails[$c]["id"] = -2;
+$thumbnails[$c]["filename"] = "thumbnails/female.gif";
+$thumbnails[$c]["title"] = "Female";
+$thumbnails[$c]["viewvalue"] = "1";
+$thumbnails[$c]["ordinalposition"] = 98;
+$c = count($thumbnails);
+$thumbnails[$c] = array();
+$thumbnails[$c]["thumbnail_id"] = -3;
+$thumbnails[$c]["id"] = -3;
+$thumbnails[$c]["filename"] = "thumbnails/generic.png";
+$thumbnails[$c]["title"] = "Unknown";
+$thumbnails[$c]["viewvalue"] = "1";
+$thumbnails[$c]["ordinalposition"] = 97;
 # Actions
 	{
 	$htm = "
@@ -98,7 +121,7 @@ $thumbnails = $results["recordset"];
 		{
 		$htm .= "
 				<td valign=bottom>
-					<div style='width: 300px;'>
+					<div style='width: 200px;'>
 					".get_thumbnail_image($key, $thumbnail)."
 					<center>
 					<input type=radio 
